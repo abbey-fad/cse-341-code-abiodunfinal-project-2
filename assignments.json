@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "68dbd4c1987b6ce1c0f2fe5e"
+  },
+  "userId": "10012345",
+  "title": "Introduction to Databases",
+  "description": "Write a report explaining relational vs non-relational databases.",
+  "dueDate": {
+    "$date": "2025-10-05T23:59:00.000Z"
+  },
+  "status": "pending",
+  "priority": "high",
+  "notes": "Use MongoDB examples",
+  "courseId": "CSE101"
+},
+{
+  "_id": {
+    "$oid": "68dbd4c1987b6ce1c0f2fe5f"
+  },
+  "userId": "10067890",
+  "title": "JavaScript Functions",
+  "description": "Implement functions for a simple calculator app.",
+  "dueDate": {
+    "$date": "2025-10-07T23:59:00.000Z"
+  },
+  "status": "in-progress",
+  "priority": "medium",
+  "notes": "Include error handling",
+  "courseId": "CSE102"
+},
+{
+  "_id": {
+    "$oid": "68dbd4c1987b6ce1c0f2fe60"
+  },
+  "userId": "10098765",
+  "title": "Web Development Basics",
+  "description": "Build a static webpage using HTML and CSS.",
+  "dueDate": {
+    "$date": "2025-10-03T23:59:00.000Z"
+  },
+  "status": "completed",
+  "priority": "low",
+  "notes": "Submit GitHub Pages link",
+  "courseId": "CSE103"
+}]

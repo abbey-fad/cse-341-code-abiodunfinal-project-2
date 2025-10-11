@@ -1,0 +1,125 @@
+### Get all users
+GET http://localhost:3000/users
+
+### Get user by ID
+GET http://localhost:3000/users/65123abcde1234567890fgh1
+
+### Create a new user
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "Adeola Johnson",
+  "email": "adeola.johnson@example.com",
+  "role": "student"
+}
+
+### Update user by ID
+PUT http://localhost:3000/users/65123abcde1234567890fgh1
+Content-Type: application/json
+
+{
+  "name": "Adeola J. Johnson",
+  "email": "adeola.j@example.com",
+  "role": "teacher"
+}
+
+### Delete user by ID
+DELETE http://localhost:3000/users/65123abcde1234567890fgh1
+
+### Get all assignments
+GET http://localhost:3000/assignments
+
+### Get assignment by ID
+GET http://localhost:3000/assignments/65234bcdef234567890ghij2
+
+### Create assignment
+POST http://localhost:3000/assignments
+Content-Type: application/json
+
+{
+  "title": "Web Development Project",
+  "description": "Create a responsive portfolio website",
+  "dueDate": "2025-10-15T23:59:59Z",
+  "status": "pending",
+  "priority": "high",
+  "courseId": "65345cdef34567890hijklm3"
+}
+
+### Update assignment by ID
+PUT http://localhost:3000/assignments/65234bcdef234567890ghij2
+Content-Type: application/json
+
+{
+  "title": "Updated Portfolio Project",
+  "description": "Add blog section to the website",
+  "dueDate": "2025-10-20T23:59:59Z",
+  "status": "in-progress",
+  "priority": "medium",
+  "courseId": "65345cdef34567890hijklm3"
+}
+
+### Delete assignment by ID
+DELETE http://localhost:3000/assignments/65234bcdef234567890ghij2
+
+
+### Get all courses
+GET http://localhost:3000/courses
+
+### Get course by ID
+GET http://localhost:3000/courses/65345cdef34567890hijklm3
+
+### Create a new course
+POST http://localhost:3000/courses
+Content-Type: application/json
+
+{
+  "name": "Software Engineering",
+  "code": "SWE301",
+  "instructor": "Dr. John Smith",
+  "credits": 3
+}
+
+### Update course by ID
+PUT http://localhost:3000/courses/65345cdef34567890hijklm3
+Content-Type: application/json
+
+{
+  "name": "Advanced Software Engineering",
+  "code": "SWE401",
+  "instructor": "Prof. Jane Doe",
+  "credits": 4
+}
+
+### Delete course by ID
+DELETE http://localhost:3000/courses/65345cdef34567890hijklm3
+
+
+### Get all comments
+GET http://localhost:3000/comments
+
+### Get comment by ID
+GET http://localhost:3000/comments/65456defg4567890ijklmn45
+
+### Create a new comment
+POST http://localhost:3000/comments
+Content-Type: application/json
+
+{
+  "text": "This assignment was really helpful!",
+  "author": "Adeola Johnson",
+  "date": "2025-10-06T12:00:00Z"
+}
+
+### Update comment by ID
+PUT http://localhost:3000/comments/65456defg4567890ijklmn45
+Content-Type: application/json
+
+{
+  "text": "I learned a lot from this project!",
+  "author": "Adeola J.",
+  "date": "2025-10-06T15:00:00Z"
+}
+
+### Delete comment by ID
+DELETE http://localhost:3000/comments/65456defg4567890ijklmn45

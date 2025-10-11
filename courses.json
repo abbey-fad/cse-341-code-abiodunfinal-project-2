@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "68e3c859a352a91e69e18d4b"
+  },
+  "courseName": "Introduction to Software Engineering",
+  "courseCode": "CSE101",
+  "description": "Foundations of software development and project management.",
+  "teacherId": "65123abcde1234567890fgh9",
+  "semester": "Fall 2025",
+  "createdAt": "2025-09-30T12:00:00.000Z"
+},
+{
+  "_id": {
+    "$oid": "68e3c859a352a91e69e18d4c"
+  },
+  "courseName": "Database Systems",
+  "courseCode": "CSE205",
+  "description": "Covers relational databases, SQL, and an introduction to NoSQL.",
+  "teacherId": "65123abcde1234567890fgh9",
+  "semester": "Winter 2026",
+  "createdAt": "2025-10-01T09:30:00.000Z"
+},
+{
+  "_id": {
+    "$oid": "68e3c859a352a91e69e18d4d"
+  },
+  "courseName": "Web Development",
+  "courseCode": "CSE230",
+  "description": "Learn HTML, CSS, JavaScript, and responsive design techniques.",
+  "teacherId": "65123abcde1234567890fgh9",
+  "semester": "Spring 2026",
+  "createdAt": "2025-10-02T15:45:00.000Z"
+}]

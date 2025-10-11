@@ -1,0 +1,27 @@
+[{
+  "_id": {
+    "$oid": "68e3c8b5a352a91e69e18d4f"
+  },
+  "assignmentId": "65234bcdef234567890ghij2",
+  "userId": "65123abcde1234567890fgh1",
+  "commentText": "This assignment was really helpful to understand APIs.",
+  "createdAt": "2025-09-30T13:00:00.000Z"
+},
+{
+  "_id": {
+    "$oid": "68e3c8b5a352a91e69e18d50"
+  },
+  "assignmentId": "65234bcdef234567890ghij2",
+  "userId": "68dd7537fad32b052ea31068",
+  "commentText": "Could we have more examples for authentication?",
+  "createdAt": "2025-10-01T14:20:00.000Z"
+},
+{
+  "_id": {
+    "$oid": "68e3c8b5a352a91e69e18d51"
+  },
+  "assignmentId": "65234bcdef234567890ghij3",
+  "userId": "68dd7537fad32b052ea31067",
+  "commentText": "Great explanation during class!",
+  "createdAt": "2025-10-02T10:15:00.000Z"
+}]
