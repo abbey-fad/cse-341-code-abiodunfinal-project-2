@@ -5,10 +5,9 @@
     "description": "API for managing users and assignments",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "cse-341-code-abiodunfinal-project-2.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http",
     "https"
   ],
   "paths": {
