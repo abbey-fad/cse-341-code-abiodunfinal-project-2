@@ -204,18 +204,10 @@
 <a name='L139'></a><a href='#L139'>139</a>
 <a name='L140'></a><a href='#L140'>140</a>
 <a name='L141'></a><a href='#L141'>141</a>
-<a name='L142'></a><a href='#L142'>142</a>
-<a name='L143'></a><a href='#L143'>143</a>
-<a name='L144'></a><a href='#L144'>144</a>
-<a name='L145'></a><a href='#L145'>145</a>
-<a name='L146'></a><a href='#L146'>146</a>
-<a name='L147'></a><a href='#L147'>147</a>
-<a name='L148'></a><a href='#L148'>148</a>
-<a name='L149'></a><a href='#L149'>149</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">3x</span>
+<a name='L142'></a><a href='#L142'>142</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -255,9 +247,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -280,7 +270,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -296,7 +285,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -305,7 +293,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -335,7 +322,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -363,7 +349,6 @@
 const { ObjectId } = require('mongodb');
 &nbsp;
 const getAll = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
-	//#swagger.tags=['Users']
 <span class="cstat-no" title="statement not covered" >	try {</span>
 		const users = <span class="cstat-no" title="statement not covered" >await mongodb</span>
 			.getDatabase()
@@ -403,10 +388,8 @@ const getSingle = <span class="fstat-no" title="function not covered" >as</span>
 };
 &nbsp;
 const getProfile = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
-	//#swagger.tags=['Users']
 <span class="cstat-no" title="statement not covered" >	try {</span>
-		// Simulate fetching the current user based on session or query
-		const userId = <span class="cstat-no" title="statement not covered" >req.user?._id || req.query.id;</span> // fallback for testing
+		const userId = <span class="cstat-no" title="statement not covered" >req.user?._id || req.query.id; </span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >		if (!userId || !ObjectId.isValid(userId)) {</span>
 <span class="cstat-no" title="statement not covered" >			return res.status(400).json({ message: 'A valid user ID is required.' });</span>
@@ -428,7 +411,6 @@ const getProfile = <span class="fstat-no" title="function not covered" >as</span
 };
 &nbsp;
 const createUser = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
-	//#swagger.tags=['Users']
 	const user = <span class="cstat-no" title="statement not covered" >{</span>
 		name: req.body.name,
 		email: req.body.email,
@@ -443,8 +425,7 @@ const createUser = <span class="fstat-no" title="function not covered" >as</span
 			.insertOne(user);
 &nbsp;
 <span class="cstat-no" title="statement not covered" >		if (response.acknowledged) {</span>
-<span class="cstat-no" title="statement not covered" >			res.status(201).json(response); </span>// send back created info
-		} else {
+<span class="cstat-no" title="statement not covered" >			res.status(201).json(response); </span>
 <span class="cstat-no" title="statement not covered" >			res.status(500).json(response.error || 'Some error occurred while creating the user.');</span>
 		}
 	} catch (err) {
@@ -453,7 +434,6 @@ const createUser = <span class="fstat-no" title="function not covered" >as</span
 };
 &nbsp;
 const updateUser = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
-	//#swagger.tags=['Users']
 <span class="cstat-no" title="statement not covered" >	if (!ObjectId.isValid(req.params.id)) {</span>
 <span class="cstat-no" title="statement not covered" >		return res.status(400).json('Must use a valid user id to update a user.');</span>
 	}
@@ -483,7 +463,6 @@ const updateUser = <span class="fstat-no" title="function not covered" >as</span
 };
 &nbsp;
 const deleteUser = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
-	//#swagger.tags=['Users']
 <span class="cstat-no" title="statement not covered" >	if (!ObjectId.isValid(req.params.id)) {</span>
 <span class="cstat-no" title="statement not covered" >		return res.status(400).json('Must use a valid user id to delete a user.');</span>
 	}
@@ -514,7 +493,7 @@ module.exports = { getAll, getSingle, getProfile, createUser, updateUser, delete
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-10-10T20:25:25.537Z
+                at 2025-10-11T17:47:27.978Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

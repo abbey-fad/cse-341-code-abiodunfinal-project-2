@@ -196,17 +196,11 @@
 <a name='L131'></a><a href='#L131'>131</a>
 <a name='L132'></a><a href='#L132'>132</a>
 <a name='L133'></a><a href='#L133'>133</a>
-<a name='L134'></a><a href='#L134'>134</a>
-<a name='L135'></a><a href='#L135'>135</a>
-<a name='L136'></a><a href='#L136'>136</a>
-<a name='L137'></a><a href='#L137'>137</a>
-<a name='L138'></a><a href='#L138'>138</a>
-<a name='L139'></a><a href='#L139'>139</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">3x</span>
+<a name='L134'></a><a href='#L134'>134</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -223,7 +217,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -248,7 +241,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -279,7 +271,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -315,7 +306,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -344,7 +334,6 @@ const { ObjectId } = require('mongodb');
 &nbsp;
 // GET all assignments
 const getAll = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
-	//#swagger.tags=['Assignments']
 <span class="cstat-no" title="statement not covered" >	try {</span>
 		const assignments = <span class="cstat-no" title="statement not covered" >await mongodb</span>
 			.getDatabase()
@@ -361,7 +350,6 @@ const getAll = <span class="fstat-no" title="function not covered" >as</span>ync
 &nbsp;
 // GET single assignment by ID
 const getSingle = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
-	//#swagger.tags=['Assignments']
 <span class="cstat-no" title="statement not covered" >	if (!ObjectId.isValid(req.params.id)) {</span>
 <span class="cstat-no" title="statement not covered" >		return res.status(400).json('Must use a valid assignment id to find an assignment.');</span>
 	}
@@ -386,7 +374,6 @@ const getSingle = <span class="fstat-no" title="function not covered" >as</span>
 &nbsp;
 // CREATE a new assignment
 const createAssignment = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
-	//#swagger.tags=['Assignments']
 	const assignment = <span class="cstat-no" title="statement not covered" >{</span>
 		userId: req.body.userId || null,
 		title: req.body.title,
@@ -406,7 +393,7 @@ const createAssignment = <span class="fstat-no" title="function not covered" >as
 			.insertOne(assignment);
 &nbsp;
 <span class="cstat-no" title="statement not covered" >		if (response.acknowledged) {</span>
-<span class="cstat-no" title="statement not covered" >			res.status(201).json(response); </span>// send back created info
+<span class="cstat-no" title="statement not covered" >			res.status(201).json(response); </span>
 		} else {
 <span class="cstat-no" title="statement not covered" >			res.status(500).json(response.error || 'Some error occurred while creating the assignment.');</span>
 		}
@@ -417,7 +404,6 @@ const createAssignment = <span class="fstat-no" title="function not covered" >as
 &nbsp;
 // UPDATE an assignment
 const updateAssignment = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
-	//#swagger.tags=['Assignments']
 <span class="cstat-no" title="statement not covered" >	if (!ObjectId.isValid(req.params.id)) {</span>
 <span class="cstat-no" title="statement not covered" >		return res.status(400).json('Must use a valid assignment id to update an assignment.');</span>
 	}
@@ -453,7 +439,6 @@ const updateAssignment = <span class="fstat-no" title="function not covered" >as
 &nbsp;
 // DELETE an assignment
 const deleteAssignment = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
-	//#swagger.tags=['Assignments']
 <span class="cstat-no" title="statement not covered" >	if (!ObjectId.isValid(req.params.id)) {</span>
 <span class="cstat-no" title="statement not covered" >		return res.status(400).json('Must use a valid assignment id to delete an assignment.');</span>
 	}
@@ -484,7 +469,7 @@ module.exports = { getAll, getSingle, createAssignment, updateAssignment, delete
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-10-10T20:25:25.537Z
+                at 2025-10-11T17:47:27.978Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
