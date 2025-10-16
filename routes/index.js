@@ -28,4 +28,16 @@ router.get(
 	}
 );
 
+// Logout route
+router.get('/logout', (req, res, next) => {
+	req.logout(function (err) {
+		if (err) { return next(err); }
+		req.session.destroy(() => {
+			res.clearCookie('connect.sid'); // Clear session cookie
+			res.send('You have been logged out successfully.');
+		});
+	});
+});
+
+
 module.exports = router;
