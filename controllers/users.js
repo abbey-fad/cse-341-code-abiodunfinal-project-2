@@ -79,8 +79,9 @@ const createUser = async (req, res) => {
 
 		if (response.acknowledged) {
 			res.status(201).json(response); 
-			res.status(500).json(response.error || 'Some error occurred while creating the user.');
-		}
+	    } else {
+		    res.status(500).json(response.error || 'Some error occurred while updating the user.');
+	    }
 	} catch (err) {
 		res.status(500).json({ message: err.message });
 	}
